@@ -10,6 +10,8 @@ const mediaRouter = require('./routes/media');
 const coursesRouter = require('./routes/courses');
 const paymentsRouter = require('./routes/payments');
 
+const verifyToken = require('./middlewares/verifyToken');
+
 const app = express();
 
 app.use(logger('dev'));
