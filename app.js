@@ -10,6 +10,7 @@ const mediaRouter = require('./routes/media');
 const coursesRouter = require('./routes/courses');
 const paymentsRouter = require('./routes/payments');
 const refershTokensRouter = require("./routes/refreshTokens");
+const mentorsRouter = require('./routes/mentors');
 
 const verifyToken = require('./middlewares/verifyToken');
 
@@ -27,5 +28,6 @@ app.use('/media', mediaRouter);
 app.use('/courses', coursesRouter);
 app.use('/payments', paymentsRouter);
 app.use("/refresh-tokens", refershTokensRouter);
+app.use('/mentors', mentorsRouter);
 
 module.exports = app;
