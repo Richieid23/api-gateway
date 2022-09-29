@@ -28,6 +28,6 @@ app.use('/media', mediaRouter);
 app.use('/courses', coursesRouter);
 app.use('/payments', paymentsRouter);
 app.use("/refresh-tokens", refershTokensRouter);
-app.use('/mentors', mentorsRouter);
+app.use('/mentors', verifyToken, mentorsRouter);
 
 module.exports = app;
